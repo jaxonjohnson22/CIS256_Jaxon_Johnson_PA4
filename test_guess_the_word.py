@@ -47,3 +47,6 @@ def test_empty_word_list_raises_error():
     # An empty word list should raise an error.
     with pytest.raises(ValueError):
         guess_the_word.choose_word([])
+def test_uppercase_guess():
+    # Uppercase guesses should work correctly.
+    assert guess_the_word.check_guess("python", "P") is True
